@@ -11,6 +11,7 @@ const Highlights = ({icon, title, para }) => {
        {para}
       </p>
     </div>
+    
   );
 };
 

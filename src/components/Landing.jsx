@@ -19,6 +19,7 @@ const Landing = () => {
                 </div>
             </header>
         </section>
+        
     )
 }
 

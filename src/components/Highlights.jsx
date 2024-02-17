@@ -29,6 +29,7 @@ const Highlight = () => {
           </div>
         </div>
       </div>
+      
     </section>
   );
 };
