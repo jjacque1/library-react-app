@@ -15,11 +15,12 @@ const Book = ({ book }) => {
         </a>
       </div>
       <div className="book__ratings">
-        <FontAwesomeIcon icon="star" />
-        <FontAwesomeIcon icon="star" />
-        <FontAwesomeIcon icon="star" />
-        <FontAwesomeIcon icon="star" />
-        <FontAwesomeIcon icon="star-half-alt" />
+        {
+          new Array(Math.floor(book.rating)).fill(0).map((_, index) => <FontAwesomeIcon icon="star" key={index} />)
+        }
+        {
+          !Number.isInteger(book.rating) && <FontAwesomeIcon icon="star-half-alt" />
+        }
       </div>
       <div className="book__price">
         {book.salePrice ? (
@@ -30,7 +31,7 @@ const Book = ({ book }) => {
             ${book.salePrice.toFixed(2)}
           </>
         ) : (
-          <> {book.originalPrice.toFixed(2)} </>
+          <> ${book.originalPrice.toFixed(2)} </>
         )}
       </div>
     </div>
