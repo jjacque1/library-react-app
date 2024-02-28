@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import Book from "../components/ui/Book";
 
-
 const Books = ({ books: initialBooks }) => {
-    const [books, setBooks] = useState(initialBooks);
+  const [books, setBooks] = useState(initialBooks);
 
-    function filterBooks() {
-      console.log("filter books")
-
-    }
-
+  function filterBooks() {
+    console.log("filter books");
+  }
 
   return (
     <div id="books__body">
@@ -21,7 +18,11 @@ const Books = ({ books: initialBooks }) => {
                 <h2 className="section__title books__header--title">
                   All Books
                 </h2>
-                <select id="filter" defaultValue="DEFAULT" onChange={filterBooks}>
+                <select
+                  id="filter"
+                  defaultValue="DEFAULT"
+                  onChange={filterBooks}
+                >
                   <option value="DEFAULT" disabled>
                     Sort
                   </option>
@@ -43,4 +44,4 @@ const Books = ({ books: initialBooks }) => {
   );
 };
 
-export default Books; 
+export default Books;
